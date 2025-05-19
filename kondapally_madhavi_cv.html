@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K. Madhavi - PhD Scholar, IIT Hyderabad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #2a9d8f; /* Updated teal accent */
+            --secondary: #f8f9fa;
+            --text: #264653;
+            --light-text: #6b7280;
+            --bg: #ffffff;
+            --card-bg: #f8f9fa;
+            --accent: #e76f51;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --gradient: linear-gradient(135deg, #2a9d8f, #264653);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Header */
+        header {
+    background: var(--bg);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+}
+
+nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* Responsive Design for Navigation */
+@media (max-width: 992px) {
+    .nav-container {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.2rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-weight: 700;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: var(--gradient);
+            border-radius: 0.8rem;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid white;
+            object-fit: cover;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+
+        .hero h2::after {
+            display: none;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+        }
+
+        .about p {
+            margin-bottom: 1.2rem;
+            color: var(--text);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .about .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 0.4rem;
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .about .btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Education Section */
+        .education .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        .education .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background: var(--primary);
+            left: 0;
+            top: 0;
+            border-radius: 3px;
+        }
+
+        .education .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .education .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            left: -36px;
+            top: 8px;
+        }
+
+        .education .timeline-item .date {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .education .timeline-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .education .timeline-item p {
+            color: var(--light-text);
+        }
+
+        /* Experience Section */
+        .experience .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        .experience .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background: var(--accent);
+            left: 0;
+            top: 0;
+            border-radius: 3px;
+        }
+
+        .experience .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .experience .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            left: -36px;
+            top: 8px;
+        }
+
+        .experience .timeline-item .date {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .experience .timeline-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .experience .timeline-item p {
+            color: var(--light-text);
+        }
+
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .research-card {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .research-card h3 {
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .research-card p {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Publications Section */
+        .publications-filter {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .publications-filter button {
+            background: var(--card-bg);
+            border: none;
+            padding: 0.6rem 1.2rem;
+            margin: 0 0.5rem 0.8rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--text);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .publications-filter button.active,
+        .publications-filter button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .publication {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            margin-bottom: 1.2rem;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .publication:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .publication p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .publication a {
+            font-size: 0.95rem;
+            margin-right: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .publication a i {
+            margin-right: 5px;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 0.8rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-card-content {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .project-card-content p {
+            color: var(--light-text);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        /* Additional Information */
+        .github-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .github-repo {
+            background: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .github-repo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .github-repo i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .github-repo h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .github-repo p {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact .card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.7rem;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        footer .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 0.8rem;
+            border-radius: 50%;
+            background: white;
+            color: var(--primary);
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: white;
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        footer p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* Skills Section Styling for Images */
+        .skills-container {
+            margin-top: 2rem;
+        }
+
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category h3 {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .skill-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+.about-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 80px auto 4rem;
+        padding: 2rem;
+    }
+    
+    .about-content {
+        flex: 1;
+    }
+    
+    .about-content h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.2rem;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+        position: relative;
+        font-weight: 700;
+    }
+    
+    .about-content h2::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 2px;
+    }
+    
+    .about-content p {
+        margin-bottom: 1.2rem;
+        color: var(--text);
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    
+    .about-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.8rem;
+        box-shadow: var(--shadow);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .about-image {
+            order: -1; /* Makes image appear first on mobile */
+        }
+    }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 1.5rem;
+            }
+
+            .hero img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .research-grid,
+            .projects-grid,
+            .github-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .publications-filter button {
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        /* Additional Social Links Styling */
+        .social-links-alt {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .social-links-alt a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0.8rem;
+            color: var(--text);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links-alt a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links-alt i {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Kondapally Madhavi</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#additional-info">Additional Info</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-container">
+    <div class="about-content">
+        <h2>Hello,</h2>
+        <p> I'm Kondapally Madhavi, a PhD scholar in Computer Science and Engineering at IIT Hyderabad, under the guidance of Dr. C. Krishna Mohan. My research centers on Autonomous Vehicle Technology.</p>
+        
+        <p>I completed my Master's degree in Computer Science and Engineering at JNTU Hyderabad and B.Tech at Kakatiya University, Warangal. I am a passionate researcher in the fields of artificial intelligence (AI) and machine learning (ML), with a strong emphasis on computer vision. I actively contribute to open-source projects and enjoy collaborating with the research community.</p>
+        
+        <p>I have made notable contributions to my field through publications in respected venues such as the IEEE Transactions on Intelligent Transportation Systems, the International Joint Conference on Neural Networks (IJCNN) and the International Conference on Pattern Recognition (ICPR) Workshops. I have also developed a transitional weather dataset for autonomous driving, filed two patents, and served as an external reviewer for renowned platforms like IJCNN and journals including Neurocomputing.</p>
+        <div class="publications-filter">
+  <a href="https://mk15001.github.io/Kondapally-Madhavi.github.io//files/K.Madhavi_CV.pdf" 
+     class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition font-semibold">
+    View CV
+  </a>
+</div>
+
+    </div>
+    <div class="about-image">
+        <img src="https://mk15001.github.io/Kondapally-Madhavi.github.io//images/123.JPG" alt="Your Profile Image">
+    </div>
+</section>
+
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">2021 - Present</div>
+                    <h3>PhD in Computer Science and Engineering</h3>
+                    <p>Indian Institute of Technology Hyderabad</p>
+                    <p>Research Focus: Autonomous Vehicle Technology, Computer Vision in Transitional Weather Conditions with CGPA of 9.25 .</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2010</div>
+                    <h3>Master of Technology in Computer Science and Engineering</h3>
+                    <p>Jawaharlal Nehru Technological University, Hyderabad<br>Focused on the application of location-based services and developed a project titled “Locating Friends and Family Using GPS” as part of her thesis work, with a final percentage of 73% .</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2006</div>
+                    <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                    <p>Kakatiya University, Warangal<br>Completed Bachelor of Technology (B.Tech) in Information Technology from Kakatiya University, Warangal with a final percentage of 73% .</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="date"> Feb 2025 - Present</div>
+                    <h3>Senior Research Fellow</h3>
+                    <p>TiHAN, IIT Hyderabad</p>
+                    <p>VLMs rely on heavy architectures unsuitable for real-time deployment. This project proposes a lightweight, efficient VLM that meets ADAS timing and resource constraints. Additionally, single-frame analysis in current systems lacks the temporal context needed for dynamic scenarios.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="date">2015 - 2021</div>
+                    <h3>Assistant Professor</h3>
+                    <p>B.V Raju Institute of Technology, Narsapur, Department of IT</p>
+                    <p>Worked as an Assistant Professor in the Department of Information Technology from February 18, 2015, to August 15, 2021, teaching various subjects, including Data Structures, Java, Big Data, and Machine Learning. Attended various certification courses in Machine Learning, Deep Learning, Python Programming, and Java.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2011 - 2012</div>
+                    <h3>Assistant Professor</h3>
+                    <p>MLR Institute of Technology and Management, Hyderabad</p>
+                    <p>Worked as an Assistant Professor in the Department of Information Technology from February 18, 2015, to August 15, 2021, teaching various subjects, including Data Structures, Java, Big Data, and Machine Learning. Attended various certification courses in Machine Learning, Deep Learning, Python Programming, and Java.</p>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Enhancing Autonomous Vehicle Technology in Transitional Weather Conditions</h3>
+                    <p>Developing robust perception systems for autonomous vehicles operating in challenging weather conditions.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Causal Interventional Training for Autonomous Vehicle Technology</h3>
+                    <p>Exploring causal reasoning approaches to improve vehicle perception in variable weather.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Developing Vision Language Models for Advanced Driver Assistance Systems</h3>
+                    <p>Building robust systems for scene understanding and decision making in autonomous driving.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Applying Vision LLMs for Medical AI Applications</h3>
+                    <p>Exploring multimodal models combining text and visual data for medical diagnostics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publications-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="journal">Journal</button>
+                <button class="filter-btn" data-filter="conference">Conference</button>
+                <button class="filter-btn" data-filter="Workshop">Workshop</button>
+                <button class="filter-btn" data-filter="Patents">Patents</button>
+            </div>
+            <div class="publication" data-type="journal">
+                <h3>Towards a Transitional Weather Scene Recognition Approach for Autonomous Vehicles</h3>
+                <p>Kondapally Madhavi, K. N. Kumar, C. Vishnu and C. K. Mohan<br>Published in IEEE Transactions on Intelligent Transportation Systems, 2024.</p>
+                <a href="https://github.com/mk15001/AIWD6-dataset"><i class="fab fa-github"></i> Dataset</a> 
+                <a href="https://doi.org/10.1109/TITS.2023.3331882"><i class="fas fa-file-pdf"></i> View Paper</a>
+            </div>
+            
+            <div class="publication" data-type="conference">
+                <h3>Object Detection in Transitional Weather Conditions for Autonomous Vehicles</h3>
+                <p>Kondapally Madhavi, K. N. Kumar and C. Krishna Mohan <br>Published in 2024 International Joint Conference on Neural Networks (IJCNN), 2024.</p>
+                <a href="https://doi.org/10.1109/IJCNN60899.2024.10651445"><i class="fas fa-link"></i> View DOI</a>
+            </div>
+            <div class="publication" data-type="conference">
+                <h3>Sentimental Analysis on Twitter Data Using Hadoop with Spring Web MVC</h3>
+                <p>RaviKiran Ramaraju, Kondapally Madhavi, G. Ravi <br>Published in Advances in Intelligent Systems and Computing (Springer Nature), 2020.</p>
+                <a href="https://doi.org/10.1007/978-981-15-5400-1_28"><i class="fas fa-link"></i> View DOI</a>
+            </div>
+            <div class="publication" data-type="Workshop">
+                <h3>TransWardX: An Explainable Black-Box Object Detection Attack for Autonomous Driving in Transitional Weather Conditions</h3>
+                <p>Kondapally Madhavi, Kumar. K.N, Mohan. C.K<br>Published in ICPR Workshops, 2024.</p>
+                <a href="https://mk15001.github.io/files/TransWardX_An%20Explainable%20Black-box%20Object%20Detection.pdf"><i class="fas fa-file-pdf"></i> View Paper</a> 
+            </div>
+            <div class="publication" data-type="Workshop">
+                <h3>Weather Scene Perception for Autonomous Vehicles</h3>
+                <p>Kondapally Madhavi, Mohan CK<br>Published in IEICE Proceedings Series 81 (S3-4), 2024.</p>
+                <a href="https://doi.org/10.34385/proc.81.S3-4"><i class="fas fa-link"></i> View DOI</a> 
+            </div>
+            <div class="publication" data-type="Patents">
+                <h3>System and Method for Performing Adaptive Object Detection In An Autonomous Vehicle System</h3>
+                <p>Kondapally Madhavi, K Naveen Kumar, C Krishna Mohan, and Sobhan Babu<br> Indian Patent Office, Official journal No. 16219-274, Application no. 202541001505, Jan, 07, 2025 (filed).</p>
+            </div>
+            <div class="publication" data-type="Patents">
+                <h3>System and Method for Generating Weather Transition Data for Autonomous Vehicle Training</h3>
+                <p>Kondapally Madhavi, K Naveen Kumar, C Krishna Mohan, and Sobhan Babu<br>Indian Patent Office, Official journal No. 16219-273, Application no. 202541000718, Jan, 03, 2025 (filed).</p>
+            </div>
+                         
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Design and Development of Road Element Segmentation and Language Guided Vision Models</h3>
+                        <p>Senior Research Assistant for the Project grant from TiHAN IIT Hyderabad with the budget of ₹12,00,000. This project focuses on safe autonomous driving in adverse weather conditions.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Design and Development of AI-based real-time lightweight system for medical drone delivery</h3>
+                        <p>Principal Investigator for this ongoing research project focused on developing intelligent systems for medical supply delivery using drone technology.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section id="additional-info">
+            <h2>Additional Information</h2>
+            <div class="github-grid">
+                <div class="github-repo">
+                        <i class="fas fa-university"></i>
+                        <h3>Teaching Assistant at IIT Hyderabad<br>(PhD supervisor)</h3>
+                        <p>∗ CS6450 - Visual Computing <br>
+                           ∗ CS6140 - Video Content Analysis<br>
+                           ∗ CS6170 - Computer Vision for Autonomous Vehicle Technology<br>
+                           ∗ CS6870 - Surveillance Video Analytics</p>
+                    </div>
+                <div class="github-repo">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>External Reviewer</h3>
+                        <p>∗ IEEE International Joint Conference on Neural Networks (2024)<br>
+                           ∗ IEEE Intelligent Transportation Systems Conference (2024)<br>
+                           ∗ Elsevier Neurocomputing (2023)</p>
+                    </div>
+                <div class="github-repo">
+                        <i class="fas fa-brain"></i>
+                        <h3><br>Student member of the International Neural Network Society (INNS)</h3>
+                    </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TensorFlow/PyTorch</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Computer Vision</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Machine Learning</span>
+                            <span>91%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 91%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Deep Learning</span>
+                            <span>93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 93%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Academic & Research Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Research Methodology</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 96%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Scientific Writing</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Statistical Analysis</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="social-links-alt">
+                <a href="https://www.linkedin.com/in/madhavi-kondapalli-442484154" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/mk15001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://scholar.google.com/citations?user=Xr1NtnIAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Madhavi-Kondapally" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                <a href="https://orcid.org/0000-0002-7604-4443" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="card">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/madhavi-kondapalli-442484154/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/mk15001" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:cs21resch15001@iith.ac.in"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=Xr1NtnIAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+        <p>&copy; 2025 K. Madhavi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking a link
+                if (navUl.classList.contains('active')) {
+                    navUl.classList.remove('active');
+                }
+            });
+        });
+        
+        // Publications filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const publications = document.querySelectorAll('.publication');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to current button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                publications.forEach(pub => {
+                    if (filter === 'all' || pub.getAttribute('data-type') === filter) {
+                        pub.style.display = 'block';
+                    } else {
+                        pub.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        /// Form submission handler
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.text();
+      alert(result);
+      this.reset();
+    } catch (error) {
+      alert("Error sending message. Please try again.");
+      console.error("Email send error:", error);
+    }
+  });
+        
+    </script>
+</body>
+</html>
